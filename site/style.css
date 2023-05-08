@@ -1,0 +1,22 @@
+ /* .conteiner{
+        display: flex;
+    } */
+    header{
+        border-bottom: 3px solid #BB9549;
+        display: flex;
+    }
+    .logo{
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: large;
+    }
+    .navbar{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: medium;
+        width: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        list-style: none;
+        color: #e3b062;
+
+    }
