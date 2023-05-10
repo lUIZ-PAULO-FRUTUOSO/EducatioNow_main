@@ -5,11 +5,12 @@
     }
     .header{
         border-bottom: 3px solid #BB9549;
-      
+        
     }
     .titulo{
         font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         font-size: large;
+        text-decoration: none;
     }
     .ul{
         display: flex;
@@ -18,7 +19,12 @@
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         color: #e3b062;
         align-items: center;
+        text-decoration: none;
 
+    }
+    a{
+        text-decoration: none;
+        color: #000000;
     }
     .img1{
        margin-top:1%;
@@ -26,4 +32,15 @@
     }
     h3{
         align-items: flex-end;
+    }
+    .sectionPar{
+        display: flex;
+        flex-direction: row;
+    }
+    .sectionImpar{
+        display: flex;
+        flex-direction: row;
+    }
+    p{
+        padding: 5%;
     }
