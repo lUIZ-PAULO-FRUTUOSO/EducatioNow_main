@@ -1,31 +1,29 @@
- /* .conteiner{
+    .conteiner{
         display: flex;
-    } */
-    header{
-        border-bottom: 3px solid #BB9549;
-        display: flex;
+        flex-direction: column;
+        padding: 5%
     }
-    .logo{
+    .header{
+        border-bottom: 3px solid #BB9549;
+      
+    }
+    .titulo{
         font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         font-size: large;
     }
-    .navbar{
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        font-size: medium;
-        width: 300px;
+    .ul{
         display: flex;
-        align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
         list-style: none;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         color: #e3b062;
+        align-items: center;
 
     }
-    .igm1{
-        position: absolute;
-        width: 381.68px;
-        height: 139.39px;
-        left: 93px;
-        top: 207.61px;
-
-        background-color: aqua;
+    .img1{
+       margin-top:1%;
+       justify-self:flex-start;
+    }
+    h3{
+        align-items: flex-end;
     }
