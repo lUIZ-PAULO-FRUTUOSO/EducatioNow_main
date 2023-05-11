@@ -29,6 +29,15 @@
     .img1{
        margin-top:1%;
        justify-self:flex-start;
+       width: 350px;
+       height: 200px;
+       border: #000000 1px solid;
+       border-radius: 44px;
+    }
+    .img2{
+        width: 400px;
+        height: 250px;
+        border-radius: 50px;
     }
     h3{
         align-items: flex-end;
@@ -36,11 +45,17 @@
     .sectionPar{
         display: flex;
         flex-direction: row;
+        font-size: 18px;
     }
     .sectionImpar{
         display: flex;
         flex-direction: row;
+        font-size: 18px;
     }
     p{
         padding: 5%;
+    }
+    .formulario{
+        justify-content: center;
+        
     }
