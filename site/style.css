@@ -57,5 +57,13 @@
     }
     .formulario{
         justify-content: center;
+
+    }
+    .artigo{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        border: #BB9549 2px solid;
+        border-radius: 44px;
         
     }
