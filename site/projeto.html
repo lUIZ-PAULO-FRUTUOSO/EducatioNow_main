@@ -24,10 +24,13 @@
         <div>
             <canvas id="grafico_barras"></canvas>
         </div>
-        <script>
-                        const ctx2 = document.getElementById('grafico_barras');
+      </div>
 
-            new Chart(ctx2,{
+</body>
+</html>
+        <script>
+            const moc1 = document.getElementById('grafico_barras');
+            new Chart(moc1,{
             type:'bar',
             data:{
                 labels:['Vs Code','Android studio','Notepad++'],
@@ -39,7 +42,3 @@
             }
             })
         </script>
-      </div>
-
-</body>
-</html>
