@@ -20,15 +20,31 @@
             </ul>
           </nav>
       </header>
+
       <div class="conteiner">
-        <div>
+      
+       <div class="divGrafico">
+
+        <div class="grafico">
             <canvas id="grafico_barras"></canvas>
         </div>
+        <div >
+            quais são as princiais ferramentas usadas no seu dia a dia?
+           <select name="" id="">
+            <option disabled value="">op1</option>
+            <option  value="">op1</option>
+            <option  value="">op2</option>
+           </select>
+        </div>
+
+       </div>
+
       </div>
 
 </body>
 </html>
         <script>
+           
             const moc1 = document.getElementById('grafico_barras');
             new Chart(moc1,{
             type:'bar',

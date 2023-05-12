@@ -74,3 +74,13 @@
         background-color: #D9D9D9;
         
     }
+    .grafico{
+        width: 50%;
+    }
+    .divGrafico{
+flex-direction: row;
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+    }
