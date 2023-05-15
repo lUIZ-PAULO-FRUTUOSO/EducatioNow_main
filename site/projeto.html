@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>educatioNow.projeto</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
@@ -25,19 +25,27 @@
       
        <div class="divGrafico">
 
-        <div class="grafico">
-            <canvas id="grafico_barras"></canvas>
-        </div>
-        <div >
-            quais são as princiais ferramentas usadas no seu dia a dia?
-           <select name="" id="">
-            <option disabled value="">op1</option>
-            <option  value="">op1</option>
-            <option  value="">op2</option>
-           </select>
+            <div class="grafico">
+                <canvas id="grafico_barras"></canvas>
+            </div>
+            
+            <div >
+                quais são as princiais ferramentas usadas no seu dia a dia?
+                <select name="" id="">
+                    <option disabled value="">op1</option>
+                    <option  value="">op1</option>
+                    <option  value="">op2</option>
+                </select>
+            </div>
+            
         </div>
 
-       </div>
+        <div class="divGrafico">
+            <div class="grafico">
+                <canvas id="grafico_barras2"></canvas>
+            </div>
+
+        </div>
 
       </div>
 
@@ -47,6 +55,19 @@
            
             const moc1 = document.getElementById('grafico_barras');
             new Chart(moc1,{
+            type:'bar',
+            data:{
+                labels:['Vs Code','Android studio','Notepad++'],
+                datasets:[{
+                label: "IDEs mais populares em 2023",
+                data:[30,12,17],
+                borderWidth:1
+                }]
+            }
+            })
+
+            const moc2 = document.getElementById('grafico_barras2');
+            new Chart(moc2,{
             type:'bar',
             data:{
                 labels:['Vs Code','Android studio','Notepad++'],
