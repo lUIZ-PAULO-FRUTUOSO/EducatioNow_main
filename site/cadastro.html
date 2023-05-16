@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+
+    <script src="./funcoes.js"></script>
     <title>cadastro</title>
 </head>
 <body>
@@ -19,7 +21,52 @@
             </ul>
           </nav>
       </div>
-      <div class="conteiner">
+
+      <div class="login">
+        <div class="alerta_erro">
+            <div class="card_erro" id="cardErro">
+                <span id="mensagem_erro"></span>
+            </div>
+        </div>
+        <div class="container">
+            <div class="card card-cadastro">
+                <h2>Bem-vindo!</h2>
+                <div class="formulario">
+
+                    <!--
+                         Para inserir mais um campo, copie uma das inputs abaixo.
+                         Assim que inserir vá para o script abaixo.
+                     -->
+
+                    <div class="campo">
+                        <span>Nome:</span>
+                        <input id="nome_input" type="text" placeholder="Seu nome">
+                    </div>
+                    <div class="campo">
+                        <span>E-mail:</span>
+                        <input id="email_input" type="text" placeholder="meuemail@provedor.com">
+                    </div>
+                    <div class="campo">
+                        <span>Senha:</span>
+                        <input id="senha_input" type="password" placeholder="******">
+                    </div>
+                    <div class="campo">
+                        <span>Confirmação da Senha:</span>
+                        <input id="confirmacao_senha_input" type="password" placeholder="******">
+                    </div>
+                    <button class="botao" onclick="cadastrar()">Cadastrar</button>
+
+                </div>
+                <div id="div_aguardar" class="loading-div">
+                    <img src="./assets/circle-loading.gif" id="loading-gif">
+                </div>
+
+                <div id="div_erros_login"></div>
+            </div>
+        </div>
+    </div>
+
+      <!-- <div class="conteiner">
         <div class="login">
             <div class="alerta_erro">
                 <div class="card_erro" id="cardErro">
@@ -40,12 +87,13 @@
                         </label>
                         <input type="text" id="ipt_nome">
                     </div>
-                    <!-- <div>
+                    
+                    <div>
                         <label>
                             Sobrenome
                         </label>
                         <input type="text" id="ipt_sobrenome">
-                    </div> -->
+                    </div> --> 
                     <!-- <div>
                         <label>
                             Data de nascimento
@@ -64,19 +112,19 @@
                         </label>
                         <input type="text" id="ipt_estado">
                     </div> -->
-                </fieldset>
+                <!-- </fieldset>
                
             
             <br>
             
-                <fieldset class="formulario">
+                <fieldset class="formulario"> -->
                     <!-- <div>
                         <label>
                             celular
                         </label>
                         <input type="tel" id="ipt_celular">
                     </div> -->
-                    <div>
+                    <!-- <div>
                         <label>
                             E-mail
                         </label>
@@ -100,7 +148,7 @@
                     Cadastre-se
                 </BUtton>
             <br>
-            
+             -->
                 <!-- <fieldset class="formulario">
                     <label>
                         Breve descrição profissional
@@ -120,10 +168,10 @@
 
         //Recupere o valor da nova input pelo nome do id
         // Agora vá para o método fetch logo abaixo
-        var nomeVar = ipt_nome.value;
-        var emailVar = ipt_email.value;
-        var senhaVar = ipt_senha.value;
-        var confirmacaoSenhaVar = ipt_conf_senha.value;
+        var nomeVar = nome_input.value;
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
+        var confirmacaoSenhaVar = confirmacao_senha_input.value;
 
         if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
             cardErro.style.display = "block"
