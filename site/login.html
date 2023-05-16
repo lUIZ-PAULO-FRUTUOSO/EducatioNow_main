@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>educatioNow.projeto</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="./js/funcoes.js"></script>
+   
 </head>
 
 <body>
@@ -19,39 +18,36 @@
                 <li> <a href="./desenvolvedor.html">Desenvolvedor</a></li>
                 <li><a href="./projeto.html">Projeto</a></li>
                 <li><a href="./artigos.html">Artigos</a></li>
-                <li><a href="cadastro.html">Cadastre-se</a></li>
+               
             </ul>
-          </nav>
-      </header>
-
-
-    <div class="login">
-        <div class="alerta_erro">
-            <div class="card_erro" id="cardErro">
-                <span id="mensagem_erro"></span>
-            </div>
+        </nav>
+    </header>
+    
+    
+    <div class="conteiner_login">
+     <form class="form">
+       <p class="form-title">login</p>
+        <div class="input-container">
+          <input placeholder="email" type="email">
+         
+      </div>
+      <div class="input-container">
+          <input placeholder="Enter password" type="password">
+ 
+         
         </div>
-        <div class="container">
-            <div class="card card-login">
-                <h2>Olá de volta!</h2>
-                <div class="formulario">
-                    <div class="campo">
-                        <span>E-mail:</span>
-                        <input id="email_input" type="text" placeholder="Login">
-                    </div>
-                    <div class="campo">
-                        <span>Senha:</span>
-                        <input id="senha_input" type="text" placeholder="******">
-                    </div>
-                    <button class="botao" onclick="entrar()">Entrar</button>
-                </div>
+         <button class="submit" type="submit">
+        entar
+      </button>
+ 
+      <p class="signup-link">
+        Ainda não é <i>educatioNow</i> ? 
+        <a href="./cadastro.html">Cadastre-se</a>
+      </p>
+   </form>
 
-              
-
-                <div id="div_erros_login"></div>
-            </div>
-        </div>
-    </div>
+ </div>
+ 
 
    
 
@@ -59,76 +55,3 @@
 
 </html>
 
-<script>
-
-
-    function entrar() {
-        aguardar();
-
-        var emailVar = email_input.value;
-        var senhaVar = senha_input.value;
-
-        if (emailVar == "" || senhaVar == "") {
-            cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-            finalizarAguardar();
-            return false;
-        }
-        else {
-            setInterval(sumirMensagem, 5000)
-        }
-
-        console.log("FORM LOGIN: ", emailVar);
-        console.log("FORM SENHA: ", senhaVar);
-
-        fetch("/usuarios/autenticar", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                emailServer: emailVar,
-                senhaServer: senhaVar
-            })
-        }).then(function (resposta) {
-            console.log("ESTOU NO THEN DO entrar()!")
-
-            if (resposta.ok) {
-                console.log(resposta);
-
-                resposta.json().then(json => {
-                    console.log(json);
-                    console.log(JSON.stringify(json));
-
-                    sessionStorage.EMAIL_USUARIO = json.email;
-                    sessionStorage.NOME_USUARIO = json.nome;
-                    sessionStorage.ID_USUARIO = json.id;
-
-                    setTimeout(function () {
-                        window.location = "./dashboard/cards.html";
-                    }, 1000); // apenas para exibir o loading
-
-                });
-
-            } else {
-
-                console.log("Houve um erro ao tentar realizar o login!");
-
-                resposta.text().then(texto => {
-                    console.error(texto);
-                    finalizarAguardar(texto);
-                });
-            }
-
-        }).catch(function (erro) {
-            console.log(erro);
-        })
-
-        return false;
-    }
-
-    function sumirMensagem() {
-        cardErro.style.display = "none"
-    }
-
-</script>
