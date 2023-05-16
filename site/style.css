@@ -47,9 +47,7 @@
         height: 250px;
         border-radius: 50px;
     }
-    h3{
-        align-items: flex-end;
-    }
+    
     .sectionPar{
         display: flex;
         flex-direction: row;
