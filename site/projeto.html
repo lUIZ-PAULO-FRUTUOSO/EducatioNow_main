@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="projeto.css">
+
     <title>educatioNow.projeto</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -29,24 +31,37 @@
                 <canvas id="grafico_barras"></canvas>
             </div>
             
-            <div >
-                quais são as princiais ferramentas usadas no seu dia a dia?
-                <select name="" id="">
-                    <option disabled value="">op1</option>
-                    <option  value="">op1</option>
-                    <option  value="">op2</option>
-                </select>
-            </div>
+           <div class="labelChart">
+                <p>lorem ipsum.............</p>
+           </div>
+          
+           <form action="">
+            <select name="IDEs" id="">
+                <option value="" disabled selected>Quais as IDEs você mais usa? </option>
+                <option onclick="inserirDado()" value="">Vs Code</option>
+                <option value="">JetBrains</option>
+                <option value="">Android studio</option>
+            </select>
+            
+           </form>
             
         </div>
-
+<br>
         <div class="divGrafico">
             <div class="grafico">
                 <canvas id="grafico_barras2"></canvas>
             </div>
 
-        </div>
+            <form action="">
+                <select name="IDEs" id="">
+                    <option value="" disabled selected>Quais as IDEs você mais usa? </option>
+                    <option value="">Vs Code</option>
+                    <option value="">JetBrains</option>
+                    <option value="">Android studio</option>
+                </select>
+               </form>
 
+        </div>
       </div>
 
 </body>
