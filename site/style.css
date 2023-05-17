@@ -126,7 +126,17 @@
     border-radius: 0.5rem;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   }
-  
+  select{
+    border: #BB9549 solid 1px;
+    border-radius: 0.5rem;
+    padding: 2px;
+    width: 365px;
+
+  }
+  select {
+    font-size: 0.875rem;
+    color:#6B7280;
+  }
   .input-container span {
     display: grid;
     position: absolute;
