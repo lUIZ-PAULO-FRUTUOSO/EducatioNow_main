@@ -27,23 +27,23 @@
       
        <div class="divGrafico">
 
-            <div class="grafico">
-                <canvas id="grafico_barras"></canvas>
-            </div>
-            
+           
            <div class="labelChart">
-                <p>lorem ipsum.............</p>
-           </div>
+               <div class="grafico">
+                   <canvas id="grafico_barras"></canvas>
+                </div>
+                <form action="">
+                    <select name="IDEs" id="">
+                        <option value="" disabled selected>Quais as IDEs você mais usa? </option>
+                        <option onclick="inserirDado()" value="">Vs Code</option>
+                        <option value="">JetBrains</option>
+                        <option value="">Android studio</option>
+                    </select>
+                </form>
+                <h3>Por que usar um editor de código fonte?</h3>
+                <span>IDEs ajudam os desenvolvedores a programar novas aplicações de forma rápida, já que os vários utilitários não precisam ser ajustados e integrados manualmente durante a configuração. Os desenvolvedores também não precisam passar horas aprendendo a usar cada uma das diferentes ferramentas, porque cada utilitário está localizado no mesmo workbench. Isso é especialmente útil quando os desenvolvedores são novos no projeto. Eles podem contar com o IDE para se atualizar em relação às ferramentas e fluxos de trabalho da equipe. Na verdade, o objetivo da maior parte das funcionalidades é economizar tempo: o preenchimento inteligente e a geração automática de código, por exemplo, eliminam a necessidade de digitar sequências inteiras.</span>
+            </div>
           
-           <form action="">
-            <select name="IDEs" id="">
-                <option value="" disabled selected>Quais as IDEs você mais usa? </option>
-                <option onclick="inserirDado()" value="">Vs Code</option>
-                <option value="">JetBrains</option>
-                <option value="">Android studio</option>
-            </select>
-            
-           </form>
             
         </div>
 <br>
@@ -72,7 +72,7 @@
             new Chart(moc1,{
             type:'bar',
             data:{
-                labels:['Vs Code','Android studio','Notepad++'],
+                labels:['Vs Code','Android studio','JetBrains'],
                 datasets:[{
                 label: "IDEs mais populares em 2023",
                 data:[30,12,17],

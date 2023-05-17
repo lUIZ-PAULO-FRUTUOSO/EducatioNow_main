@@ -1,5 +1,6 @@
 .grafico{
     width: 50%;
+
 }
 .divGrafico{
 flex-direction: row;
@@ -7,12 +8,14 @@ display: flex;
 align-items: center;
 border: 1.5px solid #BB9549;
 
+
 }
 .labelChart{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     font-family:'Times New Roman', Times, serif;
     font-size: medium;
+    padding: 2%;
 
 }
