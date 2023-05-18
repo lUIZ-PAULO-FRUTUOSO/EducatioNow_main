@@ -7,6 +7,6 @@ var objeto_teste = {
 var contador_votos = 0;
 
 function votar() {
-    contador_votos ++;
+    
     console.log(contador_votos)
 }
