@@ -39,37 +39,7 @@
                 </div>
               </section>
 
-              <section>
-                <input id="ipt_tipoEscola" type="text" placeholder="onde você da aulas?">
-                <button onclick="testar()">
-                    testar
-                </button>
-                <div id="div_testeObjeto">
-
-                </div>
-                
-              </section>
-              <script>
-                 var objeto_prof_mediotec = {
-                    soft_skils: ['resiliência','didática dinâmica', 'bom humor'],
-                    hard_skils: ['bancos de dados relacionais', 'poo','protocolo ip','desenvolvimento web','programação mobile'],
-                    nivel_formacao_min : ['bacharelado','tecnologo']
-
-                 }
-                 
-                 function testar() {
-                     div_testeObjeto.innerHTML = ''
-                     var tipoEscola = ipt_tipoEscola.value.toLowerCase();
-                     //ipt_tipoEscola.value = tipoEscola.toLowerCase();
-
-                    if (tipoEscola == 'if') {
-                        div_testeObjeto.innerHTML += `Você para dar aulas nessa instituição deve possuir essa softSkil ${objeto_prof_mediotec.hard_skils[0]}`
-                        div_testeObjeto.innerHTML += `<img src="https://blog.saseducacao.com.br/wp-content/uploads/2021/01/shutterstock_1126036289-scaled.jpg" style="height: 60px;">`
-                    }else{
-                        div_testeObjeto.innerHTML = `não reconheço essa instituição`
-                    }
-                 }
-              </script>
+              
 
               <section class="sectionImpar">
                   <div>
